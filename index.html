@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Spreader</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='lib/spreadsheet.js'></script>
+</head>
+
+<body>
+    <div id="spread">
+        <table class="spreadsheet">
+            <thead>
+                <th class="row-number">&nbsp;</th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th class="filler">&nbsp;</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="row-number">1</td>
+                    <td class="number">120.33</td>
+                    <td class="number">120.33</td>
+                    <td class="number">120.33</td>
+                    <td class="filler">&nbsp;</th>
+                </tr>
+                <tr>
+                    <td class="row-number">2</td>
+                    <td class="number">120.33</td>
+                    <td class="number">120.33</td>
+                    <td class="number">120.33</td>
+                    <td class="filler">&nbsp;</th>
+                </tr>
+                <tr>
+                    <td class="row-number">3</td>
+                    <td class="number">120.33</td>
+                    <td class="number">120.33</td>
+                    <td class="number">120.33</td>
+                    <td class="filler">&nbsp;</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="entry" class="floating ">
+        <input id="entry-input" class="floating__input" name="cell-entry" placeholder="" />
+    </div>
+
+    <script>
+        generateTable(document.getElementById("spread"));
+    </script>
+</body>
+
+</html>

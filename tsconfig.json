@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "allowUnusedLabels": true,
+    "module": "amd",
+    "removeComments" : true,
+    "outFile" : "./lib/spreadsheet.js",
+    "baseUrl" : "./",
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noImplicitAny": true,
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2017",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "compileOnSave": true,
+  "files": [
+    "src/types.ts",
+    "src/common.ts",
+    "src/CellValueType.ts",
+    "src/CellFormula.ts",
+    "src/SheetCol.ts",
+    "src/SheetRow.ts",
+    "src/Sheet.ts",
+    "src/Cell.ts",
+    "src/spread.ts",
+    "src/generate.ts"
+  ]
+}
