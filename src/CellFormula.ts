@@ -397,9 +397,9 @@ class CellFormula {
     let lhs = this.parseMultiplyDivide(sheet, tokenizer)
     while (!tokenizer.eof) {
       if (tokenizer.match(TokenType.symbol, '+')) {
-        lhs = new CellFormulaNodeAdd(lhs, this.parseMultiplyDivide(sheet, tokenizer))
+        lhs = new CellFormulaNodeAdd(lhs, this.parseAddSubtract(sheet, tokenizer))
       } else if (tokenizer.match(TokenType.symbol, '-')) {
-        lhs = new CellFormulaNodeSubtract(lhs, this.parseMultiplyDivide(sheet, tokenizer))
+        lhs = new CellFormulaNodeSubtract(lhs, this.parseAddSubtract(sheet, tokenizer))
       } else {
         break
       }
@@ -411,9 +411,9 @@ class CellFormula {
     let lhs = this.parseMultiplyAtom(sheet, tokenizer)
     while (!tokenizer.eof) {
       if (tokenizer.match(TokenType.symbol, '*')) {
-        lhs = new CellFormulaNodeMultiply(lhs, this.parseMultiplyAtom(sheet, tokenizer))
+        lhs = new CellFormulaNodeMultiply(lhs, this.parseMultiplyDivide(sheet, tokenizer))
       } else if (tokenizer.match(TokenType.symbol, '/')) {
-        lhs = new CellFormulaNodeDivide(lhs, this.parseMultiplyAtom(sheet, tokenizer))
+        lhs = new CellFormulaNodeDivide(lhs, this.parseMultiplyDivide(sheet, tokenizer))
       } else {
         break
       }
